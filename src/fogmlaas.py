@@ -16,7 +16,7 @@ def index():
 
 @app.get('/environment')
 def ml_environment():
-    return {'scikit-learn': sklearn.__version__}
+    return {'scikit-learn': sklearn.__version__, 'fogml': '0.8.0'}
 
 @app.post("/convert/pickle")
 async def convert_pickle(request: Request):
