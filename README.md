@@ -36,7 +36,7 @@ docker build -t fogmlaas:latest .
 Start the service locally:
 
 ```bash
-docker run -d --name fogmlaas -p 8000:8000 fogmlaas:latest
+docker run -d --name fogmlaas -p 9000:9000 fogmlaas:latest
 ```
 
 By default, the API will be available at:
@@ -56,7 +56,7 @@ docker logs -f fogmlaas
 ### 4. Test the API vie web browser
 
 ```
-http://127.0.0.1:8000/docs#
+http://127.0.0.1:9000/docs#
 ```
 
 ### 4. Interactive Mode (Optional)
@@ -90,7 +90,7 @@ Script `fogmlaas_test.py` provides a basic end-to-end test of the **FogMLaaS** s
    - Serializes the trained model using `pickle.dumps()`.
 
 3. **Environment Check**
-   - Sends a `GET /environment` request to the FogMLaaS service (`http://127.0.0.1:8000/environment`).
+   - Sends a `GET /environment` request to the FogMLaaS service (`http://127.0.0.1:9000/environment`).
    - Compares the server’s `scikit-learn` version with the local one.
 
 4. **Model Conversion**
